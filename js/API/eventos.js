@@ -2,7 +2,7 @@ $(function(){
     document.addEventListener("deviceready",function(){
         obtenlista();
         $("ul#ulp li.lista img.escuchar").tap(function(){
-            var ruta=$(this).attr('rel');
+            var ruta=$(this).attr('id');
             navigator.notification.alert(ruta, null, "Registro", "Instentar de nuevo");
         });
         //Sección de Registro -INICIO------------------------------------------

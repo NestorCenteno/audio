@@ -21,7 +21,7 @@ function obtenlista(){
             var audio = lista[i];
             name=audio.nombre;	
             ruta=audio.ruta;
-            $("#ulp").append('<li class="lista"><img id="escuchar" src="img/Play_button.png" width="48" height="48" rel="'+ruta+'"/><span class="nombre">'+name+'</span><img id="descargar" src="img/download_button.png" width="48" height="48"/></li>');
+            $("#ulp").append('<li class="lista"><img class="escuchar" src="img/Play_button.png" width="48" height="48" id="'+ruta+'"/><span class="nombre">'+name+'</span><img class="descargar" src="img/download_button.png" width="48" height="48"/></li>');
         }
             //navigator.notification.alert("Error al procesar datos", null, "Error", "Aceptar");
     },"json");
