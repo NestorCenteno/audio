@@ -14,7 +14,6 @@ function obtenlista(){
         }
             //navigator.notification.alert("Error al procesar datos", null, "Error", "Aceptar");
     });*/
-    navigator.notification.alert('dentro de lista', null, "Registro", "Instentar de nuevo");
     var pet=1;
     $.post("http://carlos.igitsoft.com/apps/ringtonesPlatform/servApp.php",{pet:pet},function(lista){
         $("#ulp").html('');

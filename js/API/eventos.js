@@ -1,7 +1,7 @@
 $(function(){
     document.addEventListener("deviceready",function(){
         obtenlista();
-        $("#escuchar").tap(function(){
+        $("ul#ulp li.lista img.escuchar").tap(function(){
             var ruta=$(this).attr('rel');
             navigator.notification.alert(ruta, null, "Registro", "Instentar de nuevo");
         });
