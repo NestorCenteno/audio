@@ -1,9 +1,9 @@
 $(function(){
     document.addEventListener("deviceready",function(){
         obtenlista();
-        $("ul#ulp li.lista img.escuchar").tap(function(){
+        $("ul#ulp img").tap(function(){
             var ruta=$(this).attr('id');
-            navigator.notification.alert(ruta, null, "Registro", "Instentar de nuevo");
+            alert(ruta);
         });
         //Sección de Registro -INICIO------------------------------------------
         if(!estaRegistrado())
