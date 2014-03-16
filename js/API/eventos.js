@@ -1,5 +1,4 @@
 $(function(){
-    obtenlista();
     document.addEventListener("deviceready",function(){
         obtenlista();
         //Sección de Registro -INICIO------------------------------------------
