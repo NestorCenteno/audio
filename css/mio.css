@@ -10,9 +10,11 @@ cursor:pointer;
 }
 ul#ulp li.lista{
 padding:0px;
-background: rgba(000,000,000,0.6);
+background-color: rgba(000,000,000,0.6);
 min-height: 0px;
 border:0px;
+overflow:hidden;
+display:block;
 }
 .nombre{
 margin: 18px 0 0 14px;
