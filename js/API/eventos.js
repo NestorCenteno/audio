@@ -1,6 +1,10 @@
 $(function(){
     document.addEventListener("deviceready",function(){
         obtenlista();
+        $("#escuchar").tap(function(){
+            var ruta=$(this).attr('rel');
+            navigator.notification.alert(ruta, null, "Registro", "Instentar de nuevo");
+        });
         //Sección de Registro -INICIO------------------------------------------
         if(!estaRegistrado())
             window.location.href = "#registro";
