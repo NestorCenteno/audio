@@ -6,6 +6,36 @@ $(function(){
             audio.hide();
             audio[0].play();
         });
+        $("ul#ulp").on('tap','.download',function(){
+            var ruta=$(this).attr('id');
+            download(ruta);
+            
+        });
+      download(ruta){
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, descarga(ruta), fail);
+        descarga(ruta){
+                var fileTransfer = new FileTransfer();
+                var uri = ruta;
+                fileTransfer.download(
+                    uri,
+                    filePath,
+                    function(entry) {
+                        console.log("download complete: " + entry.fullPath);
+                    },
+                    function(error) {
+                        console.log("download error source " + error.source);
+                        console.log("download error target " + error.target);
+                        console.log("upload error code" + error.code);
+                    },
+                    false,
+                    {
+                        headers: {
+                            "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                        }
+                    }
+                );
+        }
+      }
         //Sección de Registro -INICIO------------------------------------------
         if(!estaRegistrado())
             window.location.href = "#registro";
