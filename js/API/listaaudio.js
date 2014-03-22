@@ -26,9 +26,4 @@ function obtenlista(){
             //navigator.notification.alert("Error al procesar datos", null, "Error", "Aceptar");
     },"json");
     return false;
-    $("#ulp li").on("tap",function(){
-        var audio=$(this).find('audio');
-        audio.hide();
-        audio[0].play();
-    });
 }

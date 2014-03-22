@@ -1,9 +1,10 @@
 $(function(){
     document.addEventListener("deviceready",function(){
         obtenlista();
-        $("ul#ulp").on('tap','.escuchar',function(){
-            var ruta=$(this).attr('id');
-            alert(ruta);
+        $("ul#ulp li").on('tap','.escuchar',function(){
+            var audio=$(this).find('audio');
+            audio.hide();
+            audio[0].play();
         });
         //Sección de Registro -INICIO------------------------------------------
         if(!estaRegistrado())
