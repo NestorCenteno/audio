@@ -1,7 +1,7 @@
 $(function(){
     document.addEventListener("deviceready",function(){
         obtenlista();
-        $("ul#ulp li").on('tap','.escuchar',function(){
+        $("ul#ulp").on('tap','.play',function(){
             var audio=$(this).find('audio');
             audio.hide();
             audio[0].play();
