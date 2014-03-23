@@ -6,11 +6,13 @@ $(function(){
             audio.hide();
             audio[0].play();
         });
+        
         $("ul#ulp").on('tap','.download',function(){
             var ruta=$(this).attr('id');
-            download(ruta);    
+            alert(ruta);
+            //download(ruta);    
         });
-      download(ruta){
+      /*download(ruta){
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, descarga(ruta), fail);
       }
         descarga(ruta){
@@ -34,7 +36,7 @@ $(function(){
                         }
                     }
                 );
-        }
+        }*/
         //Sección de Registro -INICIO------------------------------------------
         if(!estaRegistrado())
             window.location.href = "#registro";
