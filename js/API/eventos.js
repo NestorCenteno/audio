@@ -7,7 +7,7 @@ $(function(){
             audio[0].play();
         });
         
-        $("ul#ulp").on('tap','.download',function(){
+        $("ul#ulp").on('tap','.descargar',function(){
             var ruta=$(this).attr('id');
             alert(ruta);
             //download(ruta);    
