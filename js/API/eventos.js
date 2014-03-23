@@ -10,9 +10,9 @@ $(function(){
         $("ul#ulp").on('tap','.descargar',function(){
             var ruta=$(this).attr('id');
             alert(ruta);
-            //download(ruta);    
+            download(ruta);    
         });
-      /*download(ruta){
+      download(ruta){
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, descarga(ruta), fail);
       }
         descarga(ruta){
@@ -36,7 +36,7 @@ $(function(){
                         }
                     }
                 );
-        }*/
+        }
         //Sección de Registro -INICIO------------------------------------------
         if(!estaRegistrado())
             window.location.href = "#registro";
